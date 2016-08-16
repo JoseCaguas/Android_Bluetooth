@@ -3,37 +3,24 @@ package com.example.sairamkrishna.myapplication;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-
-import android.graphics.Color;
-import android.net.wifi.ScanResult;
-import android.net.wifi.WifiManager;
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 
 public class MainActivity extends Activity  {
     Button b1,b2,b3,b4;
+    ListView lv;
     private BluetoothAdapter BA;
     private Set<BluetoothDevice>pairedDevices;
-    ListView lv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,7 +86,7 @@ public class MainActivity extends Activity  {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.string.action_settings) {
             return true;
         }
         return super.onOptionsItemSelected(item);
